@@ -1,0 +1,29 @@
+.circle {
+    --top: 0;
+    --left: 0;
+    width: clamp(300px, 50vw, 500px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-image: radial-gradient(var(--rose) 1%, transparent, transparent);
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    z-index: -1;
+    opacity: var(--circle-opacity);
+
+    &:nth-child(1) {
+        --top: 20vh;
+        --left: 50vw;
+    }
+
+    &:nth-child(2) {
+        --top: -40vh;
+        --left: -15vw;
+    }
+
+    &:nth-child(3) {
+        --top: 130vh;
+        --left: -3vw;
+    }
+
+}

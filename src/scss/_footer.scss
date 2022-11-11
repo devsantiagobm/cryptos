@@ -1,0 +1,56 @@
+.footer {
+    width: 100%;
+    min-height: 20vh;
+    background-color: #0d0d0d;
+    color: var(--color-light);
+    position: relative;
+
+    &__box {
+        background-image: linear-gradient(45deg, var(--rose), hsl(318, 100%, 78%));
+        position: absolute;
+        width: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 4px;
+        padding: 20px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px -50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    &__title{
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+    &__data{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 100%;
+    }
+
+    &__information{
+        display: flex;
+        gap: 8px;
+        font-size: .9rem;
+    }
+    
+    &__bold{    
+        font-size: 1rem;
+        font-weight: 600;
+        
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+@mixin footer-772{
+    .footer{
+        &__box{
+            width: 90%;
+        }
+    }
+}

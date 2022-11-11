@@ -1,0 +1,14 @@
+@use './hero' as *;
+@use './cryptos' as *;
+@use './footer' as *;
+
+@media screen and (max-width: 1000px){
+    @include hero-1000();
+    @include cryptos-1000();
+}
+
+@media screen and (max-width: 772px){
+    @include cryptos-772();
+    @include hero-772();
+    @include footer-772();
+}

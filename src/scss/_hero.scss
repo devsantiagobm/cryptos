@@ -1,0 +1,103 @@
+.hero {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    align-items: center;
+    justify-content: center;
+    row-gap: 80px;
+    padding: 13vh 5vw;
+    position: relative;
+    z-index: 1;
+
+    &__column {
+        display: grid;
+        place-items: center;
+
+        &--title {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    &__image {
+        animation: illustration-animation 5s ease-in infinite;
+        max-width: clamp(200px, 25vw, 322px);
+    }
+
+    @keyframes illustration-animation {
+
+        0%,
+        100% {
+            transform: translateY(10px);
+        }
+
+        50% {
+            transform: translateY(0px);
+        }
+    }
+
+    &__title {
+        font-size: 2.3rem;
+        font-weight: 600;
+    }
+
+    &__text {
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    &__button {
+        font-weight: 600;
+        background-color: var(--rose);
+        color: var(--color-light);
+        font-weight: medium;
+        border-radius: 24px;
+        justify-content: center;
+        align-items: center;
+        font-size: .85rem;
+        user-select: none;
+        box-shadow: var(--button-shadow);
+        gap: 8px;
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        padding: 16px 24px;
+        margin: 24px 0 0;
+        transition: transform .3s;
+
+        @media (hover:hover) {
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+
+        }
+    }
+
+
+    &__arrow {
+        max-width: 20px;
+    }
+
+}
+
+@mixin hero-1000 {
+    .hero {
+        &__image {
+            max-width: clamp(280px, 50vw, 412px);
+        }
+    }
+}
+
+@mixin hero-772 {
+    .hero {
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    .circle{
+        display: none;
+    }
+
+}
